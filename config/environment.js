@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'journaling-app',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: 'https://YOUR-FIREBASE-APP.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

@@ -1,0 +1,9 @@
+<ul>
+  {{#each entries as |entry|}}
+    <li>
+      {{#link-to 'entries.entry' entry}}
+        {{entry.dateCreated}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+</ul>

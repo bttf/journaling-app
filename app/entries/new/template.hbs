@@ -1,0 +1,8 @@
+<form >
+  {{textarea class="form-control" rows="30" cols="50" value=entry.body placeholder="Body"}}
+  {{input type="text" value=entry.tags placeholder="Tags"}}
+  <button class="btn btn-default" {{action "saveEntry" entry}}>Save</button>
+</form>
+
+<div class="text-success">{{saved}}</div>
+
