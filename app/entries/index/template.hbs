@@ -2,8 +2,10 @@
   {{#each entries as |entry|}}
     <li>
       {{#link-to 'entries.entry' entry}}
-        {{entry.dateCreated}}
+        {{moment entry.dateCreated}}
       {{/link-to}}
+
+      <a href="#" {{action 'deleteEntry' entry}}>{{fa-icon 'close'}}</a>
     </li>
   {{/each}}
 </ul>

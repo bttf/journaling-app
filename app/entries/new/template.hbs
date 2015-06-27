@@ -1,8 +1,15 @@
-<form >
-  {{textarea class="form-control" rows="30" cols="50" value=entry.body placeholder="Body"}}
-  {{input type="text" value=entry.tags placeholder="Tags"}}
-  <button class="btn btn-default" {{action "saveEntry" entry}}>Save</button>
-</form>
+<div class="row">
+  <div class="header-info">
+    {{moment entry.dateCreated}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="entry-window">
+    {{textarea rows="10" cols="50" value=entry.body placeholder="Body" autoresize="true"}}
+  </div>
+</div>
+
+<button class="btn btn-default" {{action "saveEntry" entry}}>Save</button>
 
 <div class="text-success">{{saved}}</div>
-
